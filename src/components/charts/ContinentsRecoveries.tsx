@@ -1,10 +1,13 @@
 "use client";
 
-import { Chart as ChartJS, CategoryScale } from "chart.js/auto";
+import { CategoryScale, Chart as ChartJS } from "chart.js/auto";
 import { Bar } from "react-chartjs-2";
+
 import useChartThemeColors from "@/hooks/useChartThemeColors";
-import { ContinentStats } from "./types";
+
 import SubHeader from "../ui/SubHeader";
+
+import { ContinentStats } from "./types";
 
 interface ContinentsRecoveryProps {
   data: ContinentStats[];

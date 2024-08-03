@@ -24,6 +24,19 @@ This project uses [Prettier](https://prettier.io/docs/en/) to ensure consistent 
 
 This also project uses [ESLint](https://eslint.org/docs/latest/) to check for any pattern mismatch in the code.
 
+#### Set up auto-sorting of imports on save (VS Code)
+
+1. In your IDE Settings, search for `codeactionsonsave`, then press `Edit in settings.json`.
+2. Add the following config. This tells VS Code to run `eslint --fix` when you save a file.
+
+```json
+"editor.codeActionsOnSave": {
+  "source.fixAll": "explicit"
+}
+```
+
+#### Use ESLint in the command line
+
 - Check for warnings/errors throughout all files of the project using `npm run lint`.
 - Fix all auto-fixable problems using `npm run lint:fix`.
 
