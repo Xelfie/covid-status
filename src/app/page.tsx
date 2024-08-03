@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <Header>COVID-19 Status</Header>
 
-      <section>
+      <section className="flex flex-1 items-center">
         <p className="flex flex-col items-center gap-4 text-center">
           <span className="text-xl sm:text-2xl">
             Worldwide updates on the status of COVID-19
