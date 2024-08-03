@@ -1,12 +1,12 @@
+import Header from "@/components/ui/Header";
+import SubHeader from "@/components/ui/SubHeader";
 import { faQuestion } from "@fortawesome/free-solid-svg-icons/faQuestion";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between gap-5 p-8 md:px-24">
-      <h1 className="text-center text-5xl font-medium text-primary sm:text-6xl">
-        COVID-19 Status
-      </h1>
+      <Header>COVID-19 Status</Header>
 
       <section>
         <p className="flex flex-col items-center gap-4 text-center">
@@ -30,9 +30,7 @@ export default function Home() {
           />
         </div>
         <div>
-          <h2 className="text-2xl text-primary sm:text-3xl">
-            What is COVID-19?
-          </h2>
+          <SubHeader>What is COVID-19?</SubHeader>
           <p>
             COVID-19 is the disease caused by the SARS-CoV-2 coronavirus. It
             usually spreads between people in close contact.
