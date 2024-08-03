@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# COVID-19 Status
 
-## Getting Started
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). The goal of this project is to provide data visualisation of COVID-19 statistics fetched from https://disease.sh.
 
-First, run the development server:
+## Set up the project
+
+Note: You may use either `npm`, `yarn`, `pnpm`, or `bun` for the following steps.
+
+### Code Formatting
+
+This project uses [Prettier](https://prettier.io/docs/en/) to ensure consistent formatting throughout the project.
+
+#### Set up Prettier on VS Code
+
+- Install the `Prettier - Code formatter` extension.
+- In your IDE Settings, search for `Editor: Format On Save` and make sure that the option is enabled.
+- In your IDE Settings, search for `Editor: Default Formatter` and make sure that Prettier is selected.
+
+#### Use Prettier in the command line
+
+- You may run `npm run format` to format all files in the project according to the defined format options.
+
+### Linting
+
+This also project uses [ESLint](https://eslint.org/docs/latest/) to check for any pattern mismatch in the code.
+
+- Check for warnings/errors throughout all files of the project using `npm run lint`.
+- Fix all auto-fixable problems using `npm run lint:fix`.
+
+## Run the project
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) within your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Run the standalone project
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+# 1. Build the application
+npm run build
 
-## Learn More
+# 2. Start the Node.js server
+npm start
+```
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Open [http://localhost:3000](http://localhost:3000) within your browser to see the result.
