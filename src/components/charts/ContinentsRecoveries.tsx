@@ -9,13 +9,13 @@ import SubHeader from "../ui/SubHeader";
 
 import { ContinentStats } from "./types";
 
-interface ContinentsRecoveryProps {
+interface ContinentsRecoveriesProps {
   data: ContinentStats[];
 }
 
 export default function ContinentsRecoveries({
   data,
-}: ContinentsRecoveryProps) {
+}: ContinentsRecoveriesProps) {
   ChartJS.register(CategoryScale);
 
   const { primaryColor, accentColor } = useChartThemeColors();
@@ -23,6 +23,7 @@ export default function ContinentsRecoveries({
   return (
     <div className="flex w-full flex-col gap-4">
       <SubHeader>Recoveries per continent</SubHeader>
+
       <Bar
         data={{
           labels: data.map((dataPerContinent) => dataPerContinent.continent),
@@ -30,13 +31,15 @@ export default function ContinentsRecoveries({
             {
               label: "Cases",
               data: data.map((dataPerContinent) => dataPerContinent.cases),
-              backgroundColor: [`rgb(${primaryColor})`],
+              backgroundColor: [`rgb(${primaryColor} / 80%)`],
+              hoverBackgroundColor: [`rgb(${primaryColor})`],
               borderRadius: 3,
             },
             {
               label: "Recovered",
               data: data.map((dataPerContinent) => dataPerContinent.recovered),
-              backgroundColor: [`rgb(${accentColor})`],
+              backgroundColor: [`rgb(${accentColor} / 80%)`],
+              hoverBackgroundColor: [`rgb(${accentColor})`],
               borderRadius: 3,
             },
           ],
