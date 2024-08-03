@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between gap-5 p-8 md:px-24">
+    <>
       <Header>COVID-19 Status</Header>
 
       <section>
@@ -37,6 +37,6 @@ export default function Home() {
           </p>
         </div>
       </section>
-    </main>
+    </>
   );
 }
