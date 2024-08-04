@@ -1,5 +1,8 @@
 import type { Config } from "tailwindcss";
 
+export const NAVBAR_HEIGHT_REM = 4.5;
+export const FOOTER_HEIGHT_REM = 4.5;
+
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -20,6 +23,13 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      height: {
+        navbar: `${NAVBAR_HEIGHT_REM}rem`,
+        footer: `${FOOTER_HEIGHT_REM}rem`,
+      },
+      spacing: {
+        layoutOffset: `${NAVBAR_HEIGHT_REM + FOOTER_HEIGHT_REM}rem`,
       },
     },
   },

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
+import Footer from "@/components/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
+
 import "@/styles/globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 
@@ -19,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning className={inter.className}>
-        <main className="flex min-h-screen flex-col items-center gap-5 p-8 md:px-24">
+        <Navbar />
+        <main className="-mt-layoutOffset flex min-h-screen flex-col items-center gap-10 p-10 px-[calc(5%+10px)] pt-layoutOffset">
           {children}
         </main>
+        <Footer />
       </body>
     </html>
   );
