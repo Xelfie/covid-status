@@ -1,6 +1,7 @@
 import { Suspense } from "react";
 
 import CasesToPopulationRatio from "@/components/charts/CasesToPopulationRatio";
+import CompareContinents from "@/components/charts/CompareContinents";
 import ContinentsRecoveries from "@/components/charts/ContinentsRecoveries";
 import Header from "@/components/ui/Header";
 
@@ -22,6 +23,7 @@ export default async function Charts() {
       >
         <ContinentsRecoveries data={data} />
         <CasesToPopulationRatio data={data} />
+        <CompareContinents data={data} />
       </Suspense>
     </>
   );
