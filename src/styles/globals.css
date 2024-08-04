@@ -8,6 +8,7 @@
   :root {
     --text-primary: 0, 0, 0;
     --primary: 18 129 138;
+    --secondary: 120 133 130;
     --accent: 252 120 80;
     --background-start: 255 255 255;
     --background-end: 222 238 240;
@@ -17,6 +18,7 @@
     :root {
       --text-primary: 255 255 255;
       --primary: 18 174 181;
+      --secondary: 120 133 130;
       --accent: 252 120 80;
       --background-start: 46 46 49;
       --background-end: 21 21 24;

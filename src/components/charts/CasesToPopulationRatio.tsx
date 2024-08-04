@@ -8,6 +8,8 @@ import useChartThemeColors from "@/hooks/useChartThemeColors";
 import { ContinentStats } from "../../types/openDiseaseResponseTypes";
 import SubHeader from "../ui/SubHeader";
 
+import ResponsiveChart from "./ResponsiveChart";
+
 interface CasesToPopulationRatioProps {
   data: ContinentStats[];
 }
@@ -33,29 +35,31 @@ export default function CasesToPopulationRatio({
     <div className="flex w-full flex-col gap-4">
       <SubHeader>Reported Cases to Population Ratio</SubHeader>
 
-      <Doughnut
-        className="min-h-80 w-full min-w-80" // this doesnt work very well...
-        data={{
-          labels: ["Worldwide population", "Total reported cases"],
-          datasets: [
-            {
-              label: "Total",
-              data: [totalPopulation, totalCases],
-              backgroundColor: [
-                `rgb(${primaryColor} / 80%)`,
-                `rgb(${accentColor} / 80%)`,
-              ],
-              hoverBackgroundColor: [
-                `rgb(${primaryColor})`,
-                `rgb(${accentColor})`,
-              ],
-              borderColor: [`rgb(${primaryColor})`, `rgb(${accentColor})`],
-              borderWidth: 0,
-              borderRadius: 0,
-            },
-          ],
-        }}
-      />
+      <ResponsiveChart className="h-[80vw] max-h-[80vh]">
+        <Doughnut
+          options={{ maintainAspectRatio: false }}
+          data={{
+            labels: ["Worldwide population", "Total reported cases"],
+            datasets: [
+              {
+                label: "Total",
+                data: [totalPopulation, totalCases],
+                backgroundColor: [
+                  `rgb(${primaryColor} / 80%)`,
+                  `rgb(${accentColor} / 80%)`,
+                ],
+                hoverBackgroundColor: [
+                  `rgb(${primaryColor})`,
+                  `rgb(${accentColor})`,
+                ],
+                borderColor: [`rgb(${primaryColor})`, `rgb(${accentColor})`],
+                borderWidth: 0,
+                borderRadius: 0,
+              },
+            ],
+          }}
+        />
+      </ResponsiveChart>
     </div>
   );
 }

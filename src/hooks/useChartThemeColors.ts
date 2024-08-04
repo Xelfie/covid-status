@@ -9,16 +9,19 @@ import { useEffect, useState } from "react";
  */
 const useChartThemeColors = () => {
   const [primaryColor, setPrimaryColor] = useState("");
+  const [secondaryColor, setSecondaryColor] = useState("");
   const [accentColor, setAccentColor] = useState("");
 
   useEffect(() => {
     const style = getComputedStyle(document.body);
     setPrimaryColor(style.getPropertyValue("--primary"));
+    setSecondaryColor(style.getPropertyValue("--secondary"));
     setAccentColor(style.getPropertyValue("--accent"));
   }, []);
 
   return {
     primaryColor,
+    secondaryColor,
     accentColor,
   };
 };

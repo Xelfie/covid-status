@@ -11,7 +11,10 @@ const config: Config = {
       colors: {
         textPrimary: "rgb(var(--text-primary) / <alpha-value>)",
         primary: "rgb(var(--primary) / <alpha-value>)",
+        secondary: "rgb(var(--secondary) / <alpha-value>)",
         accent: "rgb(var(--accent) / <alpha-value>)",
+        backgroundStart: "rgb(var(--background-start) / <alpha-value>)",
+        backgroundEnd: "rgb(var(--background-end) / <alpha-value>)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
