@@ -5,10 +5,9 @@ import { Bar } from "react-chartjs-2";
 
 import useChartThemeColors from "@/hooks/useChartThemeColors";
 
-import { ContinentStats } from "../../types/openDiseaseResponseTypes";
-import SubHeader from "../ui/SubHeader";
-
-import ResponsiveChart from "./ResponsiveChart";
+import { ContinentStats } from "../../../types/openDiseaseResponseTypes";
+import SubHeader from "../../ui/SubHeader";
+import ResponsiveChart from "../ResponsiveChart";
 
 interface ContinentsRecoveriesProps {
   data: ContinentStats[];

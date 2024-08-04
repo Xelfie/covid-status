@@ -5,18 +5,15 @@ import { Doughnut } from "react-chartjs-2";
 
 import useChartThemeColors from "@/hooks/useChartThemeColors";
 
-import { ContinentStats } from "../../types/openDiseaseResponseTypes";
-import SubHeader from "../ui/SubHeader";
+import { ContinentStats } from "../../../types/openDiseaseResponseTypes";
+import SubHeader from "../../ui/SubHeader";
+import ResponsiveChart from "../ResponsiveChart";
 
-import ResponsiveChart from "./ResponsiveChart";
-
-interface CasesToPopulationRatioProps {
+interface Props {
   data: ContinentStats[];
 }
 
-export default function CasesToPopulationRatio({
-  data,
-}: CasesToPopulationRatioProps) {
+export default function CasesToPopulationRatio({ data }: Props) {
   ChartJS.register(CategoryScale);
 
   const { primaryColor, accentColor } = useChartThemeColors();

@@ -6,9 +6,8 @@ import { Radar } from "react-chartjs-2";
 import useChartThemeColors from "@/hooks/useChartThemeColors";
 import { ContinentStats } from "@/types/openDiseaseResponseTypes";
 
-import SubHeader from "../ui/SubHeader";
-
-import ResponsiveChart from "./ResponsiveChart";
+import SubHeader from "../../ui/SubHeader";
+import ResponsiveChart from "../ResponsiveChart";
 
 interface CompareContinentsProps {
   data: ContinentStats[];
@@ -26,7 +25,7 @@ function ContinentDropdown({
 }: ContinentDropdownProps) {
   return (
     <select
-      className="bg-backgroundDropdown rounded-md px-2 text-textPrimary"
+      className="rounded-md bg-backgroundDropdown px-2 text-textPrimary"
       defaultValue={defaultValue}
       onChange={(e) => {
         const selectedContinentData = data.find(
