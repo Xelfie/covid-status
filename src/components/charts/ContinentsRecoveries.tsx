@@ -19,7 +19,7 @@ export default function ContinentsRecoveries({
 }: ContinentsRecoveriesProps) {
   ChartJS.register(CategoryScale);
 
-  const { primaryColor, accentColor } = useChartThemeColors();
+  const { primaryColor, secondaryColor, accentColor } = useChartThemeColors();
 
   return (
     <div className="flex w-full flex-col gap-4">
@@ -27,7 +27,21 @@ export default function ContinentsRecoveries({
 
       <ResponsiveChart className="min-h-80 sm:h-auto">
         <Bar
-          options={{ maintainAspectRatio: false }}
+          options={{
+            maintainAspectRatio: false,
+            scales: {
+              x: {
+                grid: {
+                  color: `rgb(${secondaryColor} / 40%)`,
+                },
+              },
+              y: {
+                grid: {
+                  color: `rgb(${secondaryColor} / 40%)`,
+                },
+              },
+            },
+          }}
           data={{
             labels: data.map((dataPerContinent) => dataPerContinent.continent),
             datasets: [

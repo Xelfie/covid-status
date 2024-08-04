@@ -26,7 +26,7 @@ function ContinentDropdown({
 }: ContinentDropdownProps) {
   return (
     <select
-      className="rounded-md border border-secondary bg-backgroundStart px-1 text-textPrimary"
+      className="bg-backgroundDropdown rounded-md px-2 text-textPrimary"
       defaultValue={defaultValue}
       onChange={(e) => {
         const selectedContinentData = data.find(
@@ -50,10 +50,10 @@ export default function CompareContinents({ data }: CompareContinentsProps) {
   const [secondContinent, setSecondContinent] = useState(data[3]);
 
   return (
-    <div className="flex w-full flex-col gap-4 lg:relative">
+    <div className="flex w-full flex-col gap-6 lg:relative">
       <SubHeader>Compare COVID-19 cases between continents</SubHeader>
 
-      <div className="flex flex-col justify-center gap-4 sm:flex-row lg:absolute lg:right-0 lg:top-12 lg:z-10 lg:max-w-44 lg:flex-col lg:rounded-md lg:border lg:border-secondary lg:bg-backgroundStart lg:p-2">
+      <div className="flex flex-col justify-center gap-4 sm:flex-row lg:absolute lg:right-0 lg:top-24 lg:z-10 lg:max-w-48 lg:flex-col lg:rounded-md lg:border lg:border-secondary/50 lg:bg-backgroundStart/30 lg:p-4 lg:text-center">
         <span>Compare</span>
         <ContinentDropdown
           data={data}

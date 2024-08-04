@@ -18,6 +18,7 @@ const config: Config = {
         accent: "rgb(var(--accent) / <alpha-value>)",
         backgroundStart: "rgb(var(--background-start) / <alpha-value>)",
         backgroundEnd: "rgb(var(--background-end) / <alpha-value>)",
+        backgroundDropdown: "rgb(var(--background-dropdown) / <alpha-value>)",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

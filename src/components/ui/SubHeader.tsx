@@ -5,7 +5,7 @@ import { TailwindProps } from "@/types/types";
 function SubHeader({ children, className }: TailwindProps & PropsWithChildren) {
   return (
     <h2
-      className={`${className && className} text-2xl text-primary sm:text-3xl`}
+      className={`${className && className} text-[calc(1rem+1vw)] text-primary`}
     >
       {children}
     </h2>

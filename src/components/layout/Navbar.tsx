@@ -7,8 +7,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Navbar() {
   return (
-    <nav className="sticky top-0 z-40 flex h-navbar w-full flex-none items-center bg-backgroundStart/50 px-5 backdrop-blur">
-      <ul className="flex w-full flex-row items-center justify-between">
+    <nav className="sticky top-0 z-40 flex h-navbar w-full flex-none items-center bg-backgroundStart/50 backdrop-blur">
+      <ul className="flex w-full flex-row items-center justify-between px-[calc(5%+10px)] text-textPrimary/80">
         <li>
           <Link href="/">
             <FontAwesomeIcon

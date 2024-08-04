@@ -8,20 +8,22 @@
   :root {
     --text-primary: 0, 0, 0;
     --primary: 18 129 138;
-    --secondary: 120 133 130;
+    --secondary: 120 133 150;
     --accent: 252 120 80;
     --background-start: 255 255 255;
     --background-end: 222 238 240;
+    --background-dropdown: 221 230 232;
   }
 
   @media (prefers-color-scheme: dark) {
     :root {
       --text-primary: 255 255 255;
-      --primary: 18 174 181;
-      --secondary: 120 133 130;
+      --primary: 22 180 189;
+      --secondary: 120 133 150;
       --accent: 252 120 80;
-      --background-start: 46 46 49;
+      --background-start: 46 46 55;
       --background-end: 21 21 24;
+      --background-dropdown: 65 72 82;
     }
   }
 }
