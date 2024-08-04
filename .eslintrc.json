@@ -34,6 +34,7 @@
           "error",
           { "devDependencies": true }
         ],
+        "react/require-default-props": "off",
         "simple-import-sort/imports": [
           "error",
           {

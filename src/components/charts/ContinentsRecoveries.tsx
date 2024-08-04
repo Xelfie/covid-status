@@ -5,9 +5,8 @@ import { Bar } from "react-chartjs-2";
 
 import useChartThemeColors from "@/hooks/useChartThemeColors";
 
+import { ContinentStats } from "../../types/openDiseaseResponseTypes";
 import SubHeader from "../ui/SubHeader";
-
-import { ContinentStats } from "./types";
 
 interface ContinentsRecoveriesProps {
   data: ContinentStats[];
@@ -22,7 +21,7 @@ export default function ContinentsRecoveries({
 
   return (
     <div className="flex w-full flex-col gap-4">
-      <SubHeader>Recoveries per continent</SubHeader>
+      <SubHeader>Recoveries per Continent</SubHeader>
 
       <Bar
         data={{

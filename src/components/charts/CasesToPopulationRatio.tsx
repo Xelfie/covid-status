@@ -5,9 +5,8 @@ import { Doughnut } from "react-chartjs-2";
 
 import useChartThemeColors from "@/hooks/useChartThemeColors";
 
+import { ContinentStats } from "../../types/openDiseaseResponseTypes";
 import SubHeader from "../ui/SubHeader";
-
-import { ContinentStats } from "./types";
 
 interface CasesToPopulationRatioProps {
   data: ContinentStats[];
