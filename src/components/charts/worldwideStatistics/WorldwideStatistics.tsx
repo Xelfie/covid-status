@@ -12,7 +12,7 @@ export default async function WorldwideStatistics() {
 
   return (
     <>
-      <CasesToPopulationRatio data={data} />;
+      <CasesToPopulationRatio data={data} />
       <ContinentsRecoveries data={data} />
       <CompareContinents data={data} />
     </>
