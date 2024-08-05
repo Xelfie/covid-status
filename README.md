@@ -1,6 +1,6 @@
 # COVID-19 Status
 
-The app can be viewed on https://homsphere-code-test.vercel.app.
+This app has been deployed using Vercel and can be viewed on https://homsphere-code-test.vercel.app.
 
 ## Intro
 
