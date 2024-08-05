@@ -11,7 +11,9 @@ export default function useWindowDimensions() {
     setHeight(window.innerHeight);
   };
 
-  window.addEventListener("resize", getWindowDimensions);
+  if (typeof window !== "undefined") {
+    window.addEventListener("resize", getWindowDimensions);
+  }
 
   return {
     windowWidth: width,
