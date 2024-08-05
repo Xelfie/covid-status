@@ -14,6 +14,8 @@ I honestly had a lot of fun with this project. It entailed a LOT of learning bet
 
 Overall, I have just tried to go one step at a time. Starting with the base configuration: get ESLint and Prettier to work together, figuring out a way to support light/dark theme, setting some base colours to be used throughout the project, etc. I tried to add any relevant information to the README whenever there was a change in configuration. I then started adding UI views, possibly reusable components. I then just kept adding views, logic, and responsiveness, along with some refactoring along the way.
 
+I have also added a loading indicator that won't really be seen unless if you throttle your Internet, since the request for statistics is very lightweight 🪶
+
 #### Styling
 
 I had very basic knowledge of Tailwind before working on this project, but I decided to use it nonetheless since it was a goal of mine to try it out, especially since it seems to be the most recommended CSS framework for Next. I have no regrets. Once I got more used to it, it made my development process really smooth.
@@ -25,6 +27,7 @@ The overall layout is quite simple given the limited amount of time to work on t
 #### Any other trade-offs
 
 - I ideally would have implemented error handling in this project, showing a message to the user about what went wrong with the request, as well as preventing any potential crashes.
+- I wish I could have played with more endpoints to show more variety of data.
 - The contents of the statistics page is not that thought-through given the time constraint. Ideally I would think more to be able to give more meaningful data to the user.
 - I found it quite hard to find proper names for my chart components, or even for my route - this might have been easier if I had thought things through better as mentioned in the last point.
 - I am still trying to learn about Next folder structure best practices but I did my best ^^
