@@ -4,7 +4,7 @@ import { TailwindProps } from "@/types/types";
 
 export default function ResponsiveChart({
   children,
-  className,
+  className = "",
 }: TailwindProps & PropsWithChildren) {
-  return <div className={`relative ${className && className}`}>{children}</div>;
+  return <div className={`relative ${className}`}>{children}</div>;
 }
