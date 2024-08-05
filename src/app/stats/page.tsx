@@ -1,6 +1,6 @@
 import { Suspense } from "react";
 
-import WorldwideStatistics from "@/components/charts/worldwideStatistics";
+import WorldwideStatistics from "@/components/charts/worldwideStatistics/WorldwideStatistics";
 import Header from "@/components/ui/Header";
 import Loader from "@/components/ui/Loader";
 
