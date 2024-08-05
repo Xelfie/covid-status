@@ -2,22 +2,28 @@ import Link from "next/link";
 
 import Header from "@/components/ui/Header";
 import SubHeader from "@/components/ui/SubHeader";
-import { faMaskFace } from "@fortawesome/free-solid-svg-icons/faMaskFace";
 import { faQuestion } from "@fortawesome/free-solid-svg-icons/faQuestion";
+import { faVirusCovid } from "@fortawesome/free-solid-svg-icons/faVirusCovid";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Home() {
   return (
     <>
       <section className="flex flex-1 flex-col items-center justify-center gap-10">
-        <Header className="-mb-5 mt-5 flex-col gap-5">
-          <span className="text-[calc(1rem+1vw)] text-slate-50">
-            Worldwide updates on the status of COVID-19
+        <Header className="-mb-9 mt-5 flex-col gap-5">
+          <span className="text-[calc(1rem+1vw)] text-textPrimary">
+            Worldwide updates on the status of
           </span>
-          <FontAwesomeIcon icon={faMaskFace} size="4x" />
+          <span>
+            C
+            <span className="m-1 animate-pulse">
+              <FontAwesomeIcon icon={faVirusCovid} />
+            </span>
+            VID-19
+          </span>
         </Header>
 
-        <p>
+        <p className="text-center">
           Based on{" "}
           <Link
             className="text-primary hover:text-accent"
@@ -28,6 +34,15 @@ export default function Home() {
             disease.sh - Open Disease Data API
           </Link>
         </p>
+      </section>
+
+      <section>
+        <Link
+          href="/stats"
+          className="flex items-center justify-center rounded-full border border-primary px-4 py-1 text-lg text-textPrimary hover:border-accent hover:text-accent"
+        >
+          View Statistics
+        </Link>
       </section>
 
       <section className="mb-2 flex flex-1 items-center justify-center">
